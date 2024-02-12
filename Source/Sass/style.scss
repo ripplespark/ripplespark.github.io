@@ -1,13 +1,80 @@
+// ====================================================================================================================
+// Fonts includes
+// ====================================================================================================================
+
+@font-face {
+    font-family: 'inter';
+    src: url('../Fonts/Inter/Inter-Thin.ttf') format('truetype');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('../Fonts/Inter/Inter-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('../Fonts/Inter/Inter-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('../Fonts/Inter/Inter-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('../Fonts/Inter/Inter-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('../Fonts/Inter/Inter-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('../Fonts/Inter/Inter-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+
+@font-face {
+    font-family: 'inter';
+    src: url('../Fonts/Inter/Inter-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+}
+
+
+@font-face {
+    font-family: 'inter';
+    src: url('../Fonts/Inter/Inter-Black.ttf') format('truetype');
+    font-weight: 900;
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "inter", sans-serif;
 }
 
 
 // Create the colors
 $colorLight: #f0f7f4 !default;
 $colorDark: #00060e !default;
+$color1: #6932FD !default;
+$color2: #732AFF !default;
+$color3: #4E3DFB !default;
+$color4: #6332FD !default;
 
 // Create the some base properties to have nicer more symmetric UI
 $base-spacing-unit: 24px !default;
@@ -39,21 +106,67 @@ $font-largest: $base-font-size * 3 !default;
 // Start of user styles 
 // ==================================================================================================================
 
-
-
-body {
-    min-height: 100lvh;
-    background-color: #050908;
-}
-
+// Styles of the circle that follows the cursor
 .circle {
     --circle-size: 40px;
     position: absolute;
     height: var(--circle-size);
     width: var(--circle-size);
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 100%;
     top: calc(var(--circle-size) / 2 * -1);
     left: calc(var(--circle-size) / 2 * -1);
     pointer-events: none;
+    z-index: 10;
+}
+
+
+
+
+.first-page {
+    min-height: 100vh;
+
+    background-image: linear-gradient(to right top, $color2, $color1);
+
+    text-align: center;
+
+    position: relative;
+
+    >.main-content {
+        position: absolute;
+
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+
+        >.logo {
+            width: 170px;
+        }
+
+        >.introduction {
+            margin-top: $spacing-large;
+            color: $colorLight;
+            max-width: $spacing-largest * 6;
+
+            font-weight: 500;
+        }
+    }
+
+    >button {
+        position: absolute;
+        left: 50%;
+        bottom: 100px;
+        transform: translate(-50%, -50%);
+
+        padding: $spacing-small ;
+        border-radius: 100%;
+        border: none;
+
+
+        >img {
+            transform: translateY(20%);
+            width: 15px;
+        }
+    }
 }
