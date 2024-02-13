@@ -45,25 +45,25 @@ const tick = () => {
 
     // 2. Calculate mouse velocity using Pythagorean theorem and adjust speed
     const mouseVelocity = Math.min(Math.sqrt(deltaMouseX ** 2 + deltaMouseY ** 2) * 4, 150);
-    
+
     // 3. Convert mouse velocity to a value in the range [0, 0.5]
     const scaleValue = (mouseVelocity / 150) * 0.5;
-    
+
     // 4. Smoothly update the current scale
     currentScale += (scaleValue - currentScale) * speed;
-    
+
     // 5. Create a transformation string for scaling
     const scaleTransform = `scale(${1 + currentScale}, ${1 - currentScale})`;
 
     // ROTATE
     // 1. Calculate the angle using the atan2 function
     const angle = Math.atan2(deltaMouseY, deltaMouseX) * 180 / Math.PI;
-    
+
     // 2. Check for a threshold to reduce shakiness at low mouse velocity
     if (mouseVelocity > 20) {
         currentAngle = angle;
     }
-    
+
     // 3. Create a transformation string for rotation
     const rotateTransform = `rotate(${currentAngle}deg)`;
 
@@ -76,3 +76,16 @@ const tick = () => {
 
 // Start the animation loop
 tick();
+
+
+
+setTimeout(() => {
+    // Get beans to animate
+    var bean1 = document.querySelector(".bean-1");
+    var bean2 = document.querySelector(".bean-2");
+
+    // Add the class that will animate them
+    bean1.classList.add("bring-forward")
+    bean2.classList.add("bring-forward")
+
+}, 250)

@@ -130,6 +130,8 @@ $font-largest: $base-font-size * 3 !default;
 
     text-align: center;
 
+    overflow: hidden;
+
     position: relative;
 
     >.main-content {
@@ -157,16 +159,92 @@ $font-largest: $base-font-size * 3 !default;
         position: absolute;
         left: 50%;
         bottom: 100px;
-        transform: translate(-50%, -50%);
 
         padding: $spacing-small ;
         border-radius: 100%;
         border: none;
 
+        background-color: $colorLight;
+
+        cursor: pointer;
 
         >img {
             transform: translateY(20%);
             width: 15px;
         }
+
+        &:hover {
+            background-color: $colorLight;
+        }
+
+
+        animation-name: button-animation;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: none;
+
+        @keyframes button-animation {
+
+            0%,
+            20%,
+            100% {
+                transform: translate(-50%, 0%);
+
+                box-shadow: 0px 0px 6px 0px $colorLight;
+            }
+
+            50%,
+            70% {
+                transform: translate(-50%, 50%);
+                box-shadow: 0px 0px 22px 6px $colorLight;
+            }
+        }
     }
+
+
+    >.bean-1, .bean-2{
+        border-radius: 300px;
+
+        position: absolute;
+        display: inline-block;
+
+        transition: all 500ms ease-in;
+    }
+
+    >.bean-1 {
+        width: 450px;
+        height: 800px;
+        transform: rotate(57.8deg);
+        left: -300px;
+        bottom: -370px;
+
+        background-image: linear-gradient(to top, rgba($colorLight, 0.1), rgba($colorLight, 0.2), rgba($colorLight, 0.55));
+
+
+        margin-bottom: -300px;
+        margin-left: -300px;
+
+        &.bring-forward {
+            margin-left: 0px;
+            margin-bottom: 0px;
+        }
+    }
+
+    >.bean-2 {
+        width: 300px;
+        height: 800px;
+        transform: rotate(42deg);
+        right: -230px;
+        top: -330px;
+
+        background-image: linear-gradient(to top, rgba($colorLight, 0.7), rgba($colorLight, 0.3) 30%, rgba($colorLight, 0.01));
+        margin-top: -250px;
+        margin-right: -250px;
+
+        &.bring-forward {
+            margin-right: 0px;
+            margin-top: 0px;
+        }
+    }
+
 }
