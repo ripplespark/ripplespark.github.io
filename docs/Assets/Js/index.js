@@ -89,3 +89,12 @@ setTimeout(() => {
     bean2.classList.add("bring-forward")
 
 }, 250)
+
+
+
+window.addEventListener('scroll', () => {
+    var scrollValue =  window.scrollY / window.innerHeight;
+    console.log(scrollValue);
+
+    document.body.style.setProperty('--scroll', scrollValue);
+});

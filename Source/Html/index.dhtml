@@ -14,4 +14,11 @@
     <span class="bean-1"></span>
     <span class="bean-2"></span>
 </div>
+
+<div class="second-page">
+    <div>some text for the test</div>
+</div>
+<div class="third-page"></div>
+
+
 <!--@ include footer @-->

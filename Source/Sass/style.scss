@@ -109,7 +109,7 @@ $font-largest: $base-font-size * 3 !default;
 // Styles of the circle that follows the cursor
 .circle {
     --circle-size: 40px;
-    position: absolute;
+    position: fixed;
     height: var(--circle-size);
     width: var(--circle-size);
     border: 2px solid white;
@@ -202,7 +202,8 @@ $font-largest: $base-font-size * 3 !default;
     }
 
 
-    >.bean-1, .bean-2{
+    >.bean-1,
+    .bean-2 {
         border-radius: 300px;
 
         position: absolute;
@@ -247,4 +248,33 @@ $font-largest: $base-font-size * 3 !default;
         }
     }
 
+}
+
+.second-page {
+
+    position: relative;
+
+    >div {
+        display: inline-block;
+        left: 400px;
+        position: absolute;
+        background-color: purple;
+        animation: rotate 1s linear infinite;
+        animation-play-state: paused;
+        animation-delay: calc(var(--scroll) * -1s);
+    }
+
+    @keyframes rotate {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    height: 100vh;
+    background-color: red;
+}
+
+.third-page {
+    height: 100vh;
+    background-color: green;
 }
