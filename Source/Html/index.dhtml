@@ -37,17 +37,20 @@
             <div>
                 <img src="./Assets/Images/computer.png" alt="computer">
                 <div>Web<br> Development</div>
-                <div>we craft engaging online experiences that captivate audiences and drive results</div>
+                <hr>
+                <div>we craft engaging online experiences that captivate audiences and drive results.</div>
             </div>
             <div>
                 <img src="./Assets/Images/phone.png" alt="phone">
                 <div>Mobile<br> Development</div>
-                <div>we craft engaging online experiences that captivate audiences and drive results</div>
+                <hr>
+                <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, modi Lorem.</div>
             </div>
             <div>
                 <img src="./Assets/Images/prush.png" alt="prush">
                 <div>Graphic<br> Design</div>
-                <div>we craft engaging online experiences that captivate audiences and drive results</div>
+                <hr>
+                <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam numquam natus minima.</div>
             </div>
         </div>
         <div class="contact">

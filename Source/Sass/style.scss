@@ -212,7 +212,7 @@ $font-largest: $base-font-size * 3 !default;
         width: 100%;
         position: absolute;
         // background-color: rgba($colorLight, 0.07);
-        background-image: linear-gradient(to right top, rgba($color2, 0.3), rgba($color1, 0.3));
+        // background-image: linear-gradient(to right top, rgba($color2, 0.3), rgba($color1, 0.3));
 
         backdrop-filter: blur(200px);
         z-index: 1;
@@ -362,9 +362,10 @@ $font-largest: $base-font-size * 3 !default;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    >img{
-        width:70px;
-        height:30px;
+
+    >img {
+        width: 70px;
+        height: 30px;
     }
 }
 
@@ -408,19 +409,18 @@ $font-largest: $base-font-size * 3 !default;
             >div {
                 width: $spacing-larger * 6;
                 height: $spacing-larger * 6;
-                padding: $spacing-large $spacing-larger;
+
                 margin-right: $spacing-larger;
 
-                border: 2px solid rgba($colorLight,0.2);
+                border: 2px solid rgba($colorLight, 0.2);
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
 
                 border-radius: $spacing-larger;
 
-                // background-image: $colorLight;
 
-                background-color: rgba($colorLight,0.4);
+                background-color: rgba($colorLight, 0.4);
 
                 backdrop-filter: blur(2px);
 
@@ -431,17 +431,37 @@ $font-largest: $base-font-size * 3 !default;
                 }
 
                 >div:nth-of-type(1) {
-                    position: absolute;
+                    margin-top: $spacing-normal * 8 + $spacing-smaller;
+                    margin-left: $spacing-larger;
 
-                    bottom: $spacing-large;
                     font-size: $font-large;
                     font-weight: 600;
                     // TODO: change color to linear gradient
                     color: $color1;
                 }
 
+                >hr {
+                    position: absolute;
+                    left: $spacing-large;
+                    top: $spacing-normal * 6 - $spacing-smaller;
+
+                    height: 2px;
+                    width: $spacing-large * 5 + $spacing-normal;
+
+                    border: none;
+                    background-color: $colorLight;
+                    opacity: 0;
+                }
+
                 >div:nth-of-type(2) {
-                    display: none;
+                    color: $colorLight;
+
+                    position: absolute;
+                    bottom: $spacing-larger;
+                    left: $spacing-large;
+                    margin-right: $spacing-large;
+                    font-size: $font-normal;
+                    opacity: 0;
                 }
 
                 &:nth-of-type(1)>img {
@@ -462,6 +482,48 @@ $font-largest: $base-font-size * 3 !default;
                     top: $spacing-large;
                     left: $spacing-normal;
                 }
+
+
+                >div:nth-of-type(1) {
+                    transition: margin-top 350ms ease-in-out, color 200ms ease-in, margin-left 350ms ease-in-out;
+                }
+
+                >div:nth-of-type(2) {
+                    transition: opacity 200ms ease-in;
+                }
+
+                >hr {
+                    transition: opacity 400ms ease-in;
+                }
+
+                transition:all 300ms ease-in;
+
+                &:hover {
+                    background-color: rgba($color1, 0.85);
+
+                    >div:nth-of-type(1) {
+                        margin-top: $spacing-large;
+                        margin-left: $spacing-large;
+
+                        font-size: $font-large;
+                        font-weight: 600;
+                        color: $colorLight;
+                    }
+
+                    >img {
+                        opacity: 0;
+                    }
+
+                    >hr {
+                        opacity: 1;
+                    }
+
+                    >div:nth-of-type(2) {
+                        opacity: 1;
+                    }
+
+                }
+
 
 
             }
@@ -495,13 +557,14 @@ $font-largest: $base-font-size * 3 !default;
                 >img {
                     width: $spacing-normal;
                     height: $spacing-normal;
-
+                    cursor: pointer;
                 }
             }
         }
     }
 
-    >.bean-1, .bean-2{
+    >.bean-1,
+    .bean-2 {
         border-radius: 300px;
 
         position: absolute;
@@ -536,8 +599,8 @@ $font-largest: $base-font-size * 3 !default;
         top: -330px;
 
         background-image: linear-gradient(to top, $color1, rgba($color1, 0.8), rgba($color1, 0.5));
-        
-        
+
+
         // margin-top: -250px;
         // margin-right: -250px;
         &.bring-forward {
