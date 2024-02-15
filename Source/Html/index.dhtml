@@ -2,6 +2,7 @@
 
 <!-- TODO: Add an animation to the beans when they load, coming from the sides in the same angle they are positioned in -->
 <!-- TODO: add a favicon to the website -->
+<!-- TODO: compress the first page video to reduce load time -->
 <div class="circle"></div>
 <div class="first-page">
     <div class="main-content">
@@ -10,15 +11,55 @@
     </div>
 
     <button><img src="./Assets/Images/arrow-down.svg"/></button>
-
-    <span class="bean-1"></span>
-    <span class="bean-2"></span>
+    <div class="objects">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <!-- <video muted autoplay loop src="./Assets/videos/computer-guy.mp4"></video> -->
+    <div class="background-blur"></div>
 </div>
 
+<div class="top-bar">
+    <img class="logo" src="./Assets/Images/logo.svg" />
+</div>
 <div class="second-page">
-    <div>some text for the test</div>
+    
+    <div class="bean-1"></div>
+    <div class="bean-2"></div>
+
+    <div class="content">
+        <div>Our Services</div>
+        <div>The process that makes your life easier</div>
+        <div class="services">
+            <div>
+                <img src="./Assets/Images/computer.png" alt="computer">
+                <div>Web<br> Development</div>
+                <div>we craft engaging online experiences that captivate audiences and drive results</div>
+            </div>
+            <div>
+                <img src="./Assets/Images/phone.png" alt="phone">
+                <div>Mobile<br> Development</div>
+                <div>we craft engaging online experiences that captivate audiences and drive results</div>
+            </div>
+            <div>
+                <img src="./Assets/Images/prush.png" alt="prush">
+                <div>Graphic<br> Design</div>
+                <div>we craft engaging online experiences that captivate audiences and drive results</div>
+            </div>
+        </div>
+        <div class="contact">
+            <img src="./Assets/Images/rocket.png" alt="rocket">
+            <div>
+                <div>Reach out!</div>
+                <img src="./Assets/Images/instagram.svg" alt="instagram logo">
+                <img src="./Assets/Images/linkedIn.svg" alt="linkedIn logo">
+            </div>
+        </div>
+    </div>
 </div>
-<div class="third-page"></div>
 
 
 <!--@ include footer @-->
