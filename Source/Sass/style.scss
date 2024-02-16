@@ -420,6 +420,7 @@ $font-largest: $base-font-size * 3 !default;
             align-items: start;
             justify-content: center;
 
+            
             >img {
                 width: 80px;
                 height: 80px;
@@ -434,11 +435,12 @@ $font-largest: $base-font-size * 3 !default;
                     margin-bottom: $spacing-smaller;
                     font-weight: 500;
                 }
-
-                >img {
-                    width: $spacing-normal;
-                    height: $spacing-normal;
-                    cursor: pointer;
+                >a{
+                    text-decoration: none;
+                    >img {
+                        width: $spacing-normal;
+                        height: $spacing-normal;
+                    }
                 }
             }
         }
