@@ -124,16 +124,12 @@ $font-largest: $base-font-size * 3 !default;
 
 
 .first-page {
-    min-height: 100vh;
-
     background-color: $colorLight;
     // background-image: linear-gradient(to right top, $color2, $color1);
-
     text-align: center;
-
     overflow: hidden;
-
     position: relative;
+    min-height: 100vh;
 
     >.main-content {
         position: absolute;
@@ -206,186 +202,16 @@ $font-largest: $base-font-size * 3 !default;
         }
     }
 
-    >.background-blur {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        // background-color: rgba($colorLight, 0.07);
-        // background-image: linear-gradient(to right top, rgba($color2, 0.3), rgba($color1, 0.3));
+    // >.background-blur {
+    //     height: 100%;
+    //     width: 100%;
+    //     position: absolute;
+    //     // background-color: rgba($colorLight, 0.07);
+    //     // background-image: linear-gradient(to right top, rgba($color2, 0.3), rgba($color1, 0.3));
 
-        backdrop-filter: blur(200px);
-        z-index: 1;
-    }
-
-    >.objects {
-        >div {
-
-            position: absolute;
-            background-color: $color2;
-
-            width: 200px;
-            height: 200px;
-            border-radius: 100%;
-
-            animation-duration: 20s;
-            animation-timing-function: ease-in-out;
-            animation-iteration-count: infinite;
-
-            &:nth-of-type(1) {
-                animation-name: animation-1;
-                animation-delay: 7s;
-            }
-
-            &:nth-of-type(2) {
-                animation-name: animation-2;
-                animation-delay: 4s;
-            }
-
-            &:nth-of-type(3) {
-                animation-name: animation-3;
-                width: 300px;
-                height: 300px;
-            }
-
-            &:nth-of-type(4) {
-                animation-name: animation-4;
-                animation-delay: 3s;
-                left: 600px;
-                top: 450px;
-                width: 500px;
-                height: 500px;
-            }
-            &:nth-of-type(5) {
-                animation-name: animation-5;
-                animation-delay: 2s;
-                width: 200px;
-                height: 300px;
-            }
-
-            @keyframes animation-1 {
-
-                0%,
-                100% {
-                    left: 10%;
-                    top: 23%;
-                }
-
-                30% {
-                    left: 40%;
-                    top: 33%;
-                }
-
-                50% {
-                    left: 60%;
-                    top: 83%;
-                }
-
-                80% {
-                    left: 40%;
-                    top: 23%;
-                }
-            }
-
-            @keyframes animation-2 {
-
-                0%,
-                100% {
-                    left: 50%;
-                    top: -15%;
-                }
-
-                30% {
-                    left: 50%;
-                    top: 25%;
-                }
-
-                50% {
-                    left: 70%;
-                    top: 3%;
-                }
-
-                80% {
-                    left: 30%;
-                    top: 35%;
-                }
-            }
-
-            @keyframes animation-3 {
-
-                0%,
-                100% {
-                    left: 100%;
-                    top: 43%;
-                }
-
-                30% {
-                    left: 50%;
-                    top: 75%;
-                }
-
-                50% {
-                    left: 40%;
-                    top: 90%;
-                }
-
-                80% {
-                    left: 80%;
-                    top: 65%;
-                }
-            }
-
-            @keyframes animation-4 {
-
-                0%,
-                100% {
-                    left: 90%;
-                    top: -20%;
-                }
-
-                30% {
-                    left: 50%;
-                    top: 20%;
-                }
-
-                50% {
-                    left: -20%;
-                    top: -20%;
-                }
-
-                80% {
-                    left: 50%;
-                    top: 20%;
-                }
-            }
-
-            @keyframes animation-5 {
-
-                0%,
-                100% {
-                    left: -10%;
-                    top: -20%;
-                }
-
-                30% {
-                    left: 10%;
-                    top: 50%;
-                }
-
-                50% {
-                    left: 10%;
-                    top: 95%;
-                }
-
-                80% {
-                    left: -10%;
-                    top: 60%;
-                }
-            }
-
-
-        }
-
-    }
+    //     // backdrop-filter: blur(200px);
+    //     z-index: 1;
+    // }
 
     >video {
         width: 100vw;
@@ -400,9 +226,6 @@ $font-largest: $base-font-size * 3 !default;
 
     }
 
-
-
-    // display: none;
 }
 
 .top-bar {
@@ -466,7 +289,9 @@ $font-largest: $base-font-size * 3 !default;
                 width: $spacing-larger * 6;
                 height: $spacing-larger * 6;
 
-                margin-right: $spacing-larger;
+                &:not(:last-child){
+                    margin-right: $spacing-larger;
+                }
 
                 border: 2px solid rgba($colorLight, 0.2);
                 display: flex;
@@ -625,80 +450,33 @@ $font-largest: $base-font-size * 3 !default;
 
         position: absolute;
         display: inline-block;
-
-        transition: all 500ms ease-in;
+        
+        opacity: 0;
+        
+        transition: opacity 200ms ease-in, transform 50ms ease-in-out ;
+        
     }
 
     >.bean-1 {
         width: 450px;
         height: 800px;
-        transform: rotate(57.8deg);
         left: -300px;
         bottom: -370px;
         background-image: linear-gradient(to top, rgba($color1, 0.3), rgba($color1, 0.7), $color1);
 
-
-        // margin-bottom: -300px;
-        // margin-left: -300px;
-
-        &.bring-forward {
-            margin-left: 0px;
-            margin-bottom: 0px;
-        }
+        opacity: calc(var(--animation-percent));
+        transform: rotate(calc(var(--animation-percent) * var(--animation-percent) * 57.8deg));
     }
 
     >.bean-2 {
         width: 300px;
         height: 800px;
-        transform: rotate(42deg);
         right: -230px;
         top: -330px;
 
         background-image: linear-gradient(to top, $color1, rgba($color1, 0.8), rgba($color1, 0.5));
 
-
-        // margin-top: -250px;
-        // margin-right: -250px;
-        &.bring-forward {
-            margin-right: 0px;
-            margin-top: 0px;
-        }
+        opacity: calc(var(--animation-percent));
+        transform: rotate(calc(var(--animation-percent) * 42deg));
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // position: relative;
-
-    // >div {
-    //     display: inline-block;
-    //     left: 400px;
-    //     position: absolute;
-    //     background-color: purple;
-    //     animation: rotate 1s linear infinite;
-    //     animation-play-state: paused;
-    //     animation-delay: calc(var(--scroll) * -1s);
-    // }
-
-    // @keyframes rotate {
-    //     to {
-    //         transform: rotate(360deg);
-    //     }
-    // }
-
-    // height: 100vh;
-    // background-color: red;
 }

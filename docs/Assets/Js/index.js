@@ -89,21 +89,9 @@ nextPageButton.onclick = () => {
 }
 
 
-
-setTimeout(() => {
-    // Get beans to animate
-    var bean1 = document.querySelector(".bean-1");
-    var bean2 = document.querySelector(".bean-2");
-
-    // Add the class that will animate them
-    bean1.classList.add("bring-forward")
-    bean2.classList.add("bring-forward")
-
-}, 250)
-
-
-
 window.addEventListener('scroll', () => {
-    var scrollValue = window.scrollY / window.innerHeight;
-    document.body.style.setProperty('--scroll', scrollValue);
+    var scrollValue = (window.scrollY + window.innerHeight)/ window.innerHeight;
+    var animationPercent = (scrollValue < 1) ? 0 : Math.min(scrollValue - 1, 1);
+
+    document.body.style.setProperty('--animation-percent', animationPercent);
 });
