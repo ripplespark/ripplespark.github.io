@@ -121,6 +121,9 @@ $font-largest: $base-font-size * 3 !default;
     z-index: 10;
 }
 
+body {
+    --animation-percent: 0;
+}
 
 
 .first-page {
@@ -289,7 +292,7 @@ $font-largest: $base-font-size * 3 !default;
                 width: $spacing-larger * 6;
                 height: $spacing-larger * 6;
 
-                &:not(:last-child){
+                &:not(:last-child) {
                     margin-right: $spacing-larger;
                 }
 
@@ -317,8 +320,10 @@ $font-largest: $base-font-size * 3 !default;
 
                     font-size: $font-large;
                     font-weight: 600;
-                    // TODO: change color to linear gradient
-                    color: $color1;
+
+                    background: linear-gradient(to right, $color1, $colorLight);
+                    background-clip: text;
+                    color: transparent;
                 }
 
                 >hr {
@@ -420,7 +425,7 @@ $font-largest: $base-font-size * 3 !default;
             align-items: start;
             justify-content: center;
 
-            
+
             >img {
                 width: 80px;
                 height: 80px;
@@ -435,8 +440,10 @@ $font-largest: $base-font-size * 3 !default;
                     margin-bottom: $spacing-smaller;
                     font-weight: 500;
                 }
-                >a{
+
+                >a {
                     text-decoration: none;
+
                     >img {
                         width: $spacing-normal;
                         height: $spacing-normal;
@@ -452,11 +459,11 @@ $font-largest: $base-font-size * 3 !default;
 
         position: absolute;
         display: inline-block;
-        
+
         opacity: 0;
-        
-        transition: opacity 200ms ease-in, transform 50ms ease-in-out ;
-        
+
+        transition: opacity 200ms ease-in, transform 50ms ease-in-out;
+
     }
 
     >.bean-1 {
