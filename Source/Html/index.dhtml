@@ -11,7 +11,7 @@
     </div>
 
     <button><img src="./Assets/Images/arrow-down.svg"/></button>
-    <div class="objects">
+    <div class="objects"> 
         <div></div>
         <div></div>
         <div></div>

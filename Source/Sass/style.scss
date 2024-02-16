@@ -123,7 +123,6 @@ $font-largest: $base-font-size * 3 !default;
 
 
 
-
 .first-page {
     min-height: 100vh;
 
@@ -228,16 +227,18 @@ $font-largest: $base-font-size * 3 !default;
             height: 200px;
             border-radius: 100%;
 
-            animation-duration: 15s;
+            animation-duration: 20s;
             animation-timing-function: ease-in-out;
             animation-iteration-count: infinite;
 
             &:nth-of-type(1) {
                 animation-name: animation-1;
+                animation-delay: 7s;
             }
 
             &:nth-of-type(2) {
                 animation-name: animation-2;
+                animation-delay: 4s;
             }
 
             &:nth-of-type(3) {
@@ -247,10 +248,18 @@ $font-largest: $base-font-size * 3 !default;
             }
 
             &:nth-of-type(4) {
+                animation-name: animation-4;
+                animation-delay: 3s;
                 left: 600px;
                 top: 450px;
                 width: 500px;
                 height: 500px;
+            }
+            &:nth-of-type(5) {
+                animation-name: animation-5;
+                animation-delay: 2s;
+                width: 200px;
+                height: 300px;
             }
 
             @keyframes animation-1 {
@@ -281,8 +290,8 @@ $font-largest: $base-font-size * 3 !default;
 
                 0%,
                 100% {
-                    left: 20%;
-                    top: 15%;
+                    left: 50%;
+                    top: -15%;
                 }
 
                 30% {
@@ -300,7 +309,6 @@ $font-largest: $base-font-size * 3 !default;
                     top: 35%;
                 }
             }
-
 
             @keyframes animation-3 {
 
@@ -323,6 +331,54 @@ $font-largest: $base-font-size * 3 !default;
                 80% {
                     left: 80%;
                     top: 65%;
+                }
+            }
+
+            @keyframes animation-4 {
+
+                0%,
+                100% {
+                    left: 90%;
+                    top: -20%;
+                }
+
+                30% {
+                    left: 50%;
+                    top: 20%;
+                }
+
+                50% {
+                    left: -20%;
+                    top: -20%;
+                }
+
+                80% {
+                    left: 50%;
+                    top: 20%;
+                }
+            }
+
+            @keyframes animation-5 {
+
+                0%,
+                100% {
+                    left: -10%;
+                    top: -20%;
+                }
+
+                30% {
+                    left: 10%;
+                    top: 50%;
+                }
+
+                50% {
+                    left: 10%;
+                    top: 95%;
+                }
+
+                80% {
+                    left: -10%;
+                    top: 60%;
                 }
             }
 

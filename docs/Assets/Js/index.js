@@ -79,6 +79,17 @@ tick();
 
 
 
+const nextPageButton = document.querySelector(".first-page>button");
+nextPageButton.onclick = () => {
+    window.scrollBy({
+        behavior: "smooth",
+        left: 0,
+        top: window.innerHeight
+    })
+}
+
+
+
 setTimeout(() => {
     // Get beans to animate
     var bean1 = document.querySelector(".bean-1");
@@ -93,8 +104,6 @@ setTimeout(() => {
 
 
 window.addEventListener('scroll', () => {
-    var scrollValue =  window.scrollY / window.innerHeight;
-    console.log(scrollValue);
-
+    var scrollValue = window.scrollY / window.innerHeight;
     document.body.style.setProperty('--scroll', scrollValue);
 });
