@@ -272,6 +272,7 @@ body {
             font-weight: 500;
             color: $colorGray;
             font-size: $font-large;
+            margin-bottom: $spacing-small;
         }
 
         >div:nth-of-type(2) {
@@ -279,7 +280,7 @@ body {
             color: $colorGray;
             font-size: $font-larger;
             max-width: $spacing-largest * 7;
-            margin-bottom: $spacing-large;
+            margin-bottom: $spacing-larger;
 
         }
 

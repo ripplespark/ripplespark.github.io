@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="80" height="80" rx="8" fill="url(#paint0_linear_82_10)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 17.5L10 20V60L12.5 62.5H67.5L70 60V20L67.5 17.5H12.5ZM15 25.6517V57.5H65V25.6508L39.9997 48.3787L15 25.6517ZM61.033 22.5H18.9662L39.9997 41.6213L61.033 22.5Z" fill="white"/>
+<defs>
+<linearGradient id="paint0_linear_82_10" x1="19" y1="25.5" x2="73.5" y2="73" gradientUnits="userSpaceOnUse">
+<stop stop-color="#7429FF"/>
+<stop offset="0.959612" stop-color="#732AFF"/>
+</linearGradient>
+</defs>
+</svg>
