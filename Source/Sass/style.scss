@@ -267,6 +267,7 @@ body {
     >.content {
         margin-top: $spacing-larger * 2;
         margin-bottom: $spacing-largest;
+        z-index: 10;
 
         >div:nth-of-type(1) {
             font-weight: 500;
@@ -281,7 +282,7 @@ body {
             font-size: $font-larger;
             max-width: $spacing-largest * 7;
             margin-bottom: $spacing-larger;
-
+            text-shadow: 0px 0px 4px $colorLight;
         }
 
         >.services {
@@ -510,6 +511,38 @@ body {
 
             >.services {
                 flex-direction: column;
+
+                >div {
+                    >div:nth-of-type(1) {
+                        color: $color1;
+                    }
+
+                    &.extra-info {
+                        background-color: rgba($color1, 0.85);
+    
+                        >div:nth-of-type(1) {
+                            margin-top: $spacing-large;
+                            margin-left: $spacing-large;
+    
+                            font-size: $font-large;
+                            font-weight: 600;
+                            color: $colorLight;
+                        }
+    
+                        >img {
+                            opacity: 0;
+                        }
+    
+                        >hr {
+                            opacity: 1;
+                        }
+    
+                        >div:nth-of-type(2) {
+                            opacity: 1;
+                        }
+    
+                    }
+                }
 
                 >div:not(:last-child) {
                     margin-right: 0;

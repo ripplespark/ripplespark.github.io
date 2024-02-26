@@ -86,6 +86,39 @@ if (!IsMobileOrTablet()) {
 }
 else {
     circleElement.style.display = "none";
+
+    // Get the cards to animate
+    const cards = document.querySelectorAll(".services>div");
+
+    // Set the options of the intersection observer
+    const options = {
+        threshold: 1,
+        rootMargin: "0px 0px -150px 0px"
+    }
+
+    // Create a new intersection observer
+    const observer = new IntersectionObserver(function (entries, observer) {
+        // For each element observe that element
+        entries.forEach(entry => {
+            // If the entry is intersecting animate it
+            if (entry.isIntersecting) {
+                entry.target.classList.add('extra-info');
+            } else {
+                entry.target.classList.remove('extra-info');
+            }
+        });
+    }, options);
+
+    // For each card
+    cards.forEach(element => {
+        // Observe that element
+        observer.observe(element);
+    });
+
+
+
+
+
 }
 
 const nextPageButton = document.querySelector(".first-page>button");
