@@ -232,7 +232,7 @@ body {
 }
 
 .top-bar {
-    z-index: 3;
+    z-index: 5;
     background-color: $color1;
     height: $spacing-larger;
     width: 100%;
@@ -267,7 +267,7 @@ body {
     >.content {
         margin-top: $spacing-larger * 2;
         margin-bottom: $spacing-largest;
-        z-index: 10;
+        z-index: 4;
 
         >div:nth-of-type(1) {
             font-weight: 500;
@@ -519,28 +519,28 @@ body {
 
                     &.extra-info {
                         background-color: rgba($color1, 0.85);
-    
+
                         >div:nth-of-type(1) {
                             margin-top: $spacing-large;
                             margin-left: $spacing-large;
-    
+
                             font-size: $font-large;
                             font-weight: 600;
                             color: $colorLight;
                         }
-    
+
                         >img {
                             opacity: 0;
                         }
-    
+
                         >hr {
                             opacity: 1;
                         }
-    
+
                         >div:nth-of-type(2) {
                             opacity: 1;
                         }
-    
+
                     }
                 }
 
@@ -553,7 +553,14 @@ body {
         }
 
         >.bean-1 {
+            opacity: 0.8;
             bottom: 170px;
+            transform: rotate(57.8deg);
+        }
+
+        >.bean-2 {
+            opacity: 0.8;
+            transform: rotate(42deg);
         }
     }
 

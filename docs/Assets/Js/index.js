@@ -83,6 +83,16 @@ if (!IsMobileOrTablet()) {
 
     // Start the animation loop
     tick();
+
+    
+
+    window.addEventListener('scroll', () => {
+        var scrollValue = (window.scrollY + window.innerHeight) / window.innerHeight;
+        var animationPercent = (scrollValue < 1) ? 0 : Math.min(scrollValue - 1, 1);
+
+        document.body.style.setProperty('--animation-percent', animationPercent);
+    });
+
 }
 else {
     circleElement.style.display = "none";
@@ -115,10 +125,6 @@ else {
         observer.observe(element);
     });
 
-
-
-
-
 }
 
 const nextPageButton = document.querySelector(".first-page>button");
@@ -129,11 +135,3 @@ nextPageButton.onclick = () => {
         top: window.innerHeight
     })
 }
-
-
-window.addEventListener('scroll', () => {
-    var scrollValue = (window.scrollY + window.innerHeight) / window.innerHeight;
-    var animationPercent = (scrollValue < 1) ? 0 : Math.min(scrollValue - 1, 1);
-
-    document.body.style.setProperty('--animation-percent', animationPercent);
-});
