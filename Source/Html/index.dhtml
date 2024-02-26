@@ -1,8 +1,5 @@
 <!--@ include header @-->
 
-<!-- TODO: change the text in the second page cards and title -->
-<!-- TODO: add contact email and link to it in the contact section -->
-<!-- TODO: add google analytics to this website -->
 <!-- TODO: add loading animation to the website -->
 <div class="circle"></div>
 <div class="first-page">
@@ -38,13 +35,13 @@
                 <img src="./Assets/Images/phone.png" alt="phone">
                 <div>Mobile<br> Development</div>
                 <hr>
-                <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, modi Lorem.</div>
+                <div>You ask for it. We make it real, we turn your needs into apps with brilliance.</div>
             </div>
             <div>
                 <img src="./Assets/Images/prush.png" alt="prush">
                 <div>Graphic<br> Design</div>
                 <hr>
-                <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam numquam natus minima.</div>
+                <div>With creativity and inspiration we bring your ideas to life and create astonishing visuals.</div>
             </div>
         </div>
         <div class="contact">
@@ -57,7 +54,7 @@
                 <a href="https://www.linkedin.com/company/swiftdash/" target="_blank">
                     <img src="./Assets/Images/linkedIn.svg" alt="linkedIn logo">
                 </a>
-                <a href="mailTo:google.com" target="_blank">
+                <a href="mailTo:swift-dash@outlook.com" target="_blank">
                     <img src="./Assets/Images/email.svg" alt="email">
                 </a>
             </div>
